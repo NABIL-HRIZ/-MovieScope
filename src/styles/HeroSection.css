@@ -1,0 +1,67 @@
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-image: url('../assets/hero-pic.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  font-family: "Protest Riot", sans-serif;
+
+}
+
+.section-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  padding:100px;
+  z-index: 1;
+}
+
+.stars {
+  color: gold;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.content-left h3 {
+  width:300px; 
+  color: white;
+  font-size:60px;
+  text-transform: capitalize;
+
+}
+
+.content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(237, 237, 237, 0.537);
+  padding: 20px;
+}
+
+.content-right img {
+  width:150px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.content-right h4 {
+  margin: 3px 0;
+  color: white;
+  font-size: 15px;
+}
+.content-right h3{
+  margin: 3px 0;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+}
