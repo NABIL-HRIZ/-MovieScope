@@ -10,9 +10,7 @@
   font-weight: 400;
 }
 
-.logo {
-  height: 30px; 
-}
+
 .nav-links{
     margin-left: 300px;
     gap: 40px;
@@ -22,7 +20,7 @@
   font-family: "Protest Riot", sans-serif;
   font-weight:300;
   border-radius: 5px;
-  color: #333;
+  color: #fff;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
