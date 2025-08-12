@@ -29,19 +29,13 @@
 }
 
  .nav-link.active{
-    background-color: #EBFFD8;
-  margin: 10px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
- .nav-link:hover{
-    background-color: #EBFFD8;
-    color: #000;
-    padding: 8px 10px !important;
-
+ color: #fff !important;
 
 }
+.nav-links .nav-link:hover{
+  border-bottom: 2px solid #EBFFD8;
+}
+
 
 
 

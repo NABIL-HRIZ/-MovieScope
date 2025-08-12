@@ -25,31 +25,5 @@
   object-fit: cover;
 
 }
-.movie-description{
-      border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-    background-color:#dfe3ef;
-    color: #000;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-.showMovies-section h3{
-    font-size:25px;
-    font-family: "Protest Riot", sans-serif;
 
-}
-.showMovies-section h4{
-    font-size:15px;
-    font-family: "Protest Riot", sans-serif;
-    color:rgb(53, 52, 52);
-
-}
-.movie-description span{
-    margin-left:200px;
-    font-size: 18px;
-}
-.movie-description span i{
-    color: rgb(114, 106, 164);
-
-}
+/* leffect de lerest cest le meme pour AffciherFilms */

@@ -29,6 +29,9 @@ const HeroSection = () => {
             className='content-left' 
           >
             <h3>Explorez notre collection de films</h3>
+            <p>Action, comédie, drame ou science-fiction ? Découvrez des films qui correspondent à vos envies du moment.</p>
+
+            <button> <i className="fa-solid fa-circle-play"></i> Trouver mon film</button>
           </div>
 
         

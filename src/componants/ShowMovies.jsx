@@ -23,7 +23,7 @@ const ShowMovies = () => {
 }, []);
   return (
     <div className='showMovies-section'>
-        <h1>Toutes  Les Films :  </h1>
+        <h1>Toutes  Les Films   </h1>
 <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -40,20 +40,30 @@ const ShowMovies = () => {
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
       >
-         {data.map((movie, i) => (
-          <SwiperSlide key={i} style={{ width: '300px' }} className=''>
-            <img
-              src={movie.image_url}
-              alt={movie.title}
-              
-            />
-            <div style={{ padding: '10px' }} className='movie-description'>
-              <h3>{movie.title}</h3>
-              <h4>{movie.year} · {movie.genre}</h4>
-              <span><i class="fa-solid fa-star"></i>   {movie.rating}</span>
-            </div>
-          </SwiperSlide>
-        ))}
+          <div className='movies-grid'>
+       {data.map((movie, index) => (
+  <SwiperSlide key={index} style={{ width: '300px' }}>
+    <div className='movie-card'>
+      <div className="card-header">
+        <img src={movie.image_url} alt={movie.title} />
+        <div className="rating-badge">
+          <i className="fa-solid fa-star"></i> {movie.rating}
+        </div>
+      </div>
+      
+      <div className='movie-details'>
+        <h3>{movie.title}</h3>
+        <div className="meta">
+          <span>{movie.year}</span>
+          <span>•</span>
+          <span>{movie.genre}</span>
+        </div>
+      </div>
+    </div>
+  </SwiperSlide>
+))}
+
+      </div>
         
       </Swiper>
     </div>

@@ -8,6 +8,7 @@ import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import ShowMovies from './componants/ShowMovies';
 import AfficherFilms from './componants/AfficherFilms';
 import Footer from './componants/Footer';
+import ScrollToTopButton from './componants/ScrollToTopButton';
 const App = () => {
   return (
     <Router>
@@ -17,13 +18,19 @@ const App = () => {
           <>
             <HeroSection />
           <ShowMovies />
+          <ScrollToTopButton />
           </>
         
           
         } />
         <Route path='/propos-nous'
         element={
-          <About />
+          <>
+           <About />
+          <ScrollToTopButton />
+          </>
+         
+
         } />
         <Route path='/afficher-films' element={<AfficherFilms />}/>
       </Routes>

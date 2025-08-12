@@ -1,9 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import * as XLSX from "xlsx";
 import '../styles/AfficherFilms.css'
+import AOS from 'aos'
+import ScrollToTopButton from './ScrollToTopButton';
 const AfficherFilms = () => {
     const [movies,setMovies]=useState([])
 
+    useEffect(()=>{
+ AOS.init({duration:800});
+
+    })
 
  useEffect(() => {
   fetch("/movies-scope-data.xlsx") 
@@ -17,11 +23,12 @@ const AfficherFilms = () => {
 }, []);
     
   return (
+    <>
       <div className='allfilms-section'>
         <h1>Toutes Les Films</h1>
          <div className='movies-grid'>
         {movies.map((movie, index) => (
-          <div className='movie-card' key={index}>
+          <div className='movie-card' key={index} data-aos="fade-down" data-aos-delay={Math.floor(index / 4) *300}>
             <div className="card-header">
               <img
                 src={movie.image_url}
@@ -45,6 +52,10 @@ const AfficherFilms = () => {
       </div>
 
       </div>
+      
+      <ScrollToTopButton />
+    </>
+    
       
   )
 }
