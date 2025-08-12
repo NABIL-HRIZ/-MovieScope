@@ -43,7 +43,8 @@ export default function About() {
         MovieScope est votre destination ultime pour découvrir, explorer et apprécier les films 
         du monde entier. Notre objectif est de vous offrir des critiques fiables.
       </p>
-      <Link className='btn btn-pulse'>Explorer Films</Link>
+                 <Link className='btn btn-pulse' to="/Afficher-films">Afficher Toutes </Link>
+
     </div>
 
 
@@ -56,7 +57,9 @@ export default function About() {
         de favoris, vous ne manquerez jamais un film qui mérite d’être vu. Naviguez facilement 
         et trouvez le contenu qui correspond à vos goûts.
       </p>
-      <Link className='btn btn-pulse'>Explorer Films</Link>
+                          <Link className='btn btn-pulse' to="/Afficher-films">Afficher Toutes </Link>
+
+
 
     </div>
 
@@ -71,7 +74,7 @@ export default function About() {
         aux discussions. Ensemble, célébrons l’art du cinéma et explorons les merveilles qu’il a 
         à offrir.
       </p>
-      <Link className='btn btn-pulse'>Explorer Films</Link>
+                     <Link className='btn btn-pulse' to="/Afficher-films">Afficher Toutes </Link>
 
     </div>
         </SwiperSlide>

@@ -1,0 +1,63 @@
+.footer-section {
+  background-color: #0f0f0f; 
+  color: #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 80px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-descreption {
+  max-width: 400px;
+}
+
+.footer-descreption h2{
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.footer-descreption p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-links ul,
+.footer-conatct ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li,
+.footer-conatct ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+ font-family: "Protest Riot", sans-serif;
+ color: rgb(131, 130, 130);
+}
+
+.footer-links ul li:hover,
+.footer-conatct ul li:hover {
+  color: #ebffd8; 
+}
+
+.footer-conatct ul li i {
+  margin-right: 8px;
+ color: rgb(131, 130, 130); 
+}
+
+
+@media (max-width: 768px) {
+  .footer-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .footer-descreption {
+    max-width: 100%;
+  }
+}

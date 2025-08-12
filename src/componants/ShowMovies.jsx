@@ -1,15 +1,10 @@
 import React, { useRef, useState } from 'react';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useEffect } from 'react';
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-
 import '../styles/ShowMovies.css';
-
-// import required modules
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 import * as XLSX from "xlsx";
@@ -28,7 +23,7 @@ const ShowMovies = () => {
 }, []);
   return (
     <div className='showMovies-section'>
-        <h1>Explorer Les Films</h1>
+        <h1>Toutes  Les Films :  </h1>
 <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -50,7 +45,7 @@ const ShowMovies = () => {
             <img
               src={movie.image_url}
               alt={movie.title}
-              style={{ width: '100%', height: '300px', objectFit: 'cover'}}
+              
             />
             <div style={{ padding: '10px' }} className='movie-description'>
               <h3>{movie.title}</h3>

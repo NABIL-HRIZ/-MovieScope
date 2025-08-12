@@ -7,6 +7,7 @@ import About from './componants/About';
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import ShowMovies from './componants/ShowMovies';
 import AfficherFilms from './componants/AfficherFilms';
+import Footer from './componants/Footer';
 const App = () => {
   return (
     <Router>
@@ -26,6 +27,7 @@ const App = () => {
         } />
         <Route path='/afficher-films' element={<AfficherFilms />}/>
       </Routes>
+      <Footer />
     </Router>
 
   )

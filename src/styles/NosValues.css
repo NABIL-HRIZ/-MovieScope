@@ -5,6 +5,7 @@
     grid-template-rows: repeat(6, 1fr);
     gap: 8px;
     padding-left:150px;
+    padding-bottom: 40px;
 }
     
 .div1 {
