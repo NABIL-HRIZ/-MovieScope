@@ -5,19 +5,26 @@ import MyNavbar from './componants/myNavbar';
 import HeroSection from './componants/HeroSection';
 import About from './componants/About';
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import ShowMovies from './componants/ShowMovies';
+import AfficherFilms from './componants/AfficherFilms';
 const App = () => {
   return (
     <Router>
     <MyNavbar />
       <Routes>
         <Route path='/' element={
-          <HeroSection />
+          <>
+            <HeroSection />
+          <ShowMovies />
+          </>
+        
           
         } />
         <Route path='/propos-nous'
         element={
           <About />
         } />
+        <Route path='/afficher-films' element={<AfficherFilms />}/>
       </Routes>
     </Router>
 
