@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/FilterFilms.css';
 import * as XLSX from 'xlsx';
 import GenresBackground from './GenresIcon';
@@ -33,23 +34,30 @@ const FilterFilms = () => {
             required
             type="text"
           />
+
         </form>
       </div>
 
       <h1>Explorer par Genre</h1>
      <div className="genres-grid">
   {uniqueGenres.map((genre, index) => (
+    <Link to={`/genres/${genre}`}>
     <div className="filterParGenre" key={index}  style={{
       backgroundImage: `url(${GenresBackground[genre]})`,
       backgroundSize: "cover",
       backgroundPosition: "center",
-    }}>
+    }}
+    >
      <span className="text">{genre}</span>
       <p>Découvrir les Films</p>
     </div>
+    </Link>
+    
   ))}
 </div>
     </div>
+
+
 
     <ScrollToTopButton />
     </>
