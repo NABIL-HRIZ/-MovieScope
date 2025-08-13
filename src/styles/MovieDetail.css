@@ -1,0 +1,121 @@
+.film-detail{
+  position: relative;
+  border-radius:20px;
+  overflow: hidden;
+  color: #fff;
+  background: #0b0c10;
+  box-shadow: 0 12px 40px rgba(0,0,0,.35);
+  padding:100px;
+}
+
+.film-detail::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--bg);
+  background-size: cover;
+  background-position: center;
+  opacity: .5;                 
+}
+
+.film-detail__overlay{
+  position: absolute;
+  inset: 0;
+  background:rgba(40, 39, 39, 0.5)
+}
+
+.film-detail__content{
+  position: relative;
+  display: flex;
+  gap:30px;
+  padding-top:50px;
+}
+
+.film-img{
+  width:300px;
+border-radius: 20px;
+}
+.film-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.film-infos{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+.film-title{
+  font-size:30px;
+  line-height: 1.1;
+  letter-spacing: .3px;
+  margin: 0;
+}
+.meta {
+  display: flex;
+  flex-direction: column !important;
+  align-items: flex-start !important; 
+justify-content: flex-start;  gap: 12px;
+}
+
+.genre-pill{
+  padding: .4rem .9rem;
+  border-radius: 999px;
+  background: rgba(150, 193, 160, 0.18);    
+  color: #dbe4ff;
+  border: 1px solid rgba(180, 199, 171, 0.4);
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: .2px;
+  backdrop-filter: blur(4px);
+}
+
+.rating-bagdge {
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffc107;
+  width:60px;     
+  height:60px;    
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size:15px;
+   border: 3px solid rgba(255, 193, 7, 0.5); /* Faded border */
+  margin-top:10px;
+}
+
+.section-label{
+  margin: 6px 0 0;
+  letter-spacing: .4px;
+  font-weight: 700;
+  opacity: .95;
+}
+
+.synopsis-card{
+  margin-top: 4px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.16);
+  max-height: 240px;
+  overflow: auto;
+  box-shadow: 0 10px 26px rgba(0,0,0,.25);
+}
+.synopsis-card p{
+  margin: 0;
+  line-height: 1.6;
+  color: #f5f7ff;
+}
+
+.synopsis-card::-webkit-scrollbar{ width: 10px; }
+.synopsis-card::-webkit-scrollbar-thumb{
+  background: rgba(255,255,255,.25);
+  border: 2px solid transparent;
+}
+

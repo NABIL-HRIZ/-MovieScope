@@ -3,7 +3,7 @@ import '../styles/HeroSection.css';
 import img from '../assets/sec-img.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import { Link } from 'react-router-dom';
 const HeroSection = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 }); 
@@ -31,7 +31,7 @@ const HeroSection = () => {
             <h3>Explorez notre collection de films</h3>
             <p>Action, comédie, drame ou science-fiction ? Découvrez des films qui correspondent à vos envies du moment.</p>
 
-            <button> <i className="fa-solid fa-circle-play"></i> Trouver mon film</button>
+            <button><Link to="/chercher" style={{color:'#fff',textDecoration:"none"}}><i className="fa-solid fa-circle-play"></i> Trouver mon film</Link> </button>
           </div>
 
         

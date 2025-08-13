@@ -8,11 +8,12 @@ import '../styles/ShowMovies.css';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 import * as XLSX from "xlsx";
+import { Link } from 'react-router-dom';
 const ShowMovies = () => {
     const [data,setData]=useState([])
     
     useEffect(() => {
-  fetch("/movies-scope-data.xlsx") 
+  fetch("/movies-data.xlsx") 
     .then((res) => res.arrayBuffer()) 
     .then((arrayBuffer) => {
       const workbook = XLSX.read(arrayBuffer, { type: "array" }); 
@@ -43,7 +44,8 @@ const ShowMovies = () => {
           <div className='movies-grid'>
        {data.map((movie, index) => (
   <SwiperSlide key={index} style={{ width: '300px' }}>
-    <div className='movie-card'>
+    <Link to={`/film/${movie.id}`} >
+      <div className='movie-card'>
       <div className="card-header">
         <img src={movie.image_url} alt={movie.title} />
         <div className="rating-badge">
@@ -53,13 +55,15 @@ const ShowMovies = () => {
       
       <div className='movie-details'>
         <h3>{movie.title}</h3>
-        <div className="meta">
+        <div className="metaa">
           <span>{movie.year}</span>
           <span>•</span>
           <span>{movie.genre}</span>
         </div>
       </div>
     </div>
+    </Link>
+  
   </SwiperSlide>
 ))}
 

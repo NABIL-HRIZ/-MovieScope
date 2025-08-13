@@ -1,0 +1,85 @@
+.filter-section{
+    padding: 150px;
+    background-color: #000;
+    color: #fff;
+}
+.form-container{
+    display: flex;
+    justify-content: end;
+}
+.form-input {
+  display: flex;
+ align-items: center; 
+  background-color:rgb(255, 255, 255);
+  padding: 5px 10px;
+  border-radius: 30px;
+  width:400px; 
+  overflow: hidden;
+}
+
+.form-input input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff; 
+  padding: 10px;
+  font-size: 1rem;
+}
+.form-input input:focus{
+    color: #000;
+}
+
+.form-input i {
+  font-size: 20px;
+}
+.filter-section h1{
+    text-align: start !important;
+    font-size:40px;
+    position: relative;
+}
+.filter-section h1::after{
+    left:40px;
+}
+
+.genres-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:30px;
+  margin-top: 20px;
+}
+
+.filterParGenre {
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100px;
+  width: 300px;
+  background-color: rgba(0,0,0,0.4); 
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.filterParGenre span {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.filterParGenre p {
+  font-size: 0.85rem;
+  margin-top: 5px;
+  opacity: 0.8;
+  color: #fff !important;
+}
+
+.filterParGenre:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+  opacity: 1;
+}
+
+

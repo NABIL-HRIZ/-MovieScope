@@ -29,7 +29,7 @@
   padding: 0;
 }
 
-.footer-links ul li,
+.footer-links ul li a,
 .footer-conatct ul li {
   margin-bottom: 10px;
   cursor: pointer;
@@ -38,15 +38,11 @@
  color: rgb(131, 130, 130);
 }
 
-.footer-links ul li:hover,
+.footer-links ul li a:hover,
 .footer-conatct ul li:hover {
   color: #ebffd8; 
 }
 
-.footer-conatct ul li i {
-  margin-right: 8px;
- color: rgb(131, 130, 130); 
-}
 
 
 @media (max-width: 768px) {

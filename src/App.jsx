@@ -9,6 +9,8 @@ import ShowMovies from './componants/ShowMovies';
 import AfficherFilms from './componants/AfficherFilms';
 import Footer from './componants/Footer';
 import ScrollToTopButton from './componants/ScrollToTopButton';
+import MovieDetail from './componants/MovieDetail';
+import FilterFilms from './componants/FilterFilms';
 const App = () => {
   return (
     <Router>
@@ -29,10 +31,11 @@ const App = () => {
            <About />
           <ScrollToTopButton />
           </>
-         
 
         } />
         <Route path='/afficher-films' element={<AfficherFilms />}/>
+        <Route path="/film/:id" element={<MovieDetail />} />
+        <Route path='/chercher' element={<FilterFilms />} />
       </Routes>
       <Footer />
     </Router>

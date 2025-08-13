@@ -3,6 +3,7 @@ import * as XLSX from "xlsx";
 import '../styles/AfficherFilms.css'
 import AOS from 'aos'
 import ScrollToTopButton from './ScrollToTopButton';
+import {Link} from 'react-router-dom'
 const AfficherFilms = () => {
     const [movies,setMovies]=useState([])
 
@@ -12,7 +13,7 @@ const AfficherFilms = () => {
     })
 
  useEffect(() => {
-  fetch("/movies-scope-data.xlsx") 
+  fetch("/movies-data.xlsx") 
     .then((res) => res.arrayBuffer()) 
     .then((arrayBuffer) => {
       const workbook = XLSX.read(arrayBuffer, { type: "array" }); 
@@ -28,7 +29,8 @@ const AfficherFilms = () => {
         <h1>Toutes Les Films</h1>
          <div className='movies-grid'>
         {movies.map((movie, index) => (
-          <div className='movie-card' key={index} data-aos="fade-down" data-aos-delay={Math.floor(index / 4) *300}>
+          <Link to={`/film/${movie.id}`}>
+             <div className='movie-card' key={index} data-aos="fade-down" data-aos-delay={Math.floor(index / 4) *300}>
             <div className="card-header">
               <img
                 src={movie.image_url}
@@ -41,13 +43,15 @@ const AfficherFilms = () => {
             
             <div className='movie-details'>
               <h3>{movie.title }</h3>
-              <div className="meta">
+              <div className="metaa">
                 <span>{movie.year}</span>
                 <span>•</span>
                 <span>{movie.genre}</span>
               </div>
             </div>
           </div>
+          </Link>
+       
         ))}
       </div>
 
