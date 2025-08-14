@@ -9,21 +9,36 @@ const FilterFilms = () => {
   const [uniqueGenres, setUniqueGenres] = useState([]);
   const [searchInput,setSearchInput]=useState('')
   const [suggestions,setSuggestions]=useState([])
+  const [noResults,setNoResults]=useState(false)
+  const [loading,setLoading]=useState(true)
 
 
    const handleSearchChange = (e) => {
     const value = e.target.value;
     setSearchInput(value);
 
-       if (value.trim() === '') {
+       if (value.trim() === '' ) {
       setSuggestions([]);
+      setNoResults(false);
       return;
     }
 
      const filtered = movies.filter((movie) => movie.title.toLowerCase().includes(value.toLowerCase()))
       .slice(0, 5); 
     setSuggestions(filtered);
+
+      if (filtered.length === 0) {
+    setSuggestions([]);      
+    setNoResults(true);    
+  } else {
+    setSuggestions(filtered);
+    setNoResults(false);
+  }
+
   };
+
+
+ 
   useEffect(() => {
     fetch('/all-movies-data.xlsx')
       .then((res) => res.arrayBuffer())
@@ -35,7 +50,12 @@ const FilterFilms = () => {
         const genres = jsonData.map((movie) => movie.genre);
         const unique = [...new Set(genres)];
         setUniqueGenres(unique);
-      });
+
+        setTimeout(() => {
+        setLoading(false);
+      },1875);
+      
+    });
   }, []);
 
   return (
@@ -54,6 +74,8 @@ const FilterFilms = () => {
           />
         </form>
 
+        {noResults && <div className="no-results-message">No film trouvé</div>}
+
           {suggestions.length > 0 && (
             <ul className="suggestions-list">
               {suggestions.map((movie, index) => (
@@ -68,6 +90,15 @@ const FilterFilms = () => {
       </div>
 
       <h1>Explorer par Genre</h1>
+
+       {loading ? (
+  <div className="loader-container">
+    <div class="loader">
+      
+    </div>
+    <p>En cours de chargement ...</p>
+  </div>
+) : (
      <div className="genres-grid">
   {uniqueGenres.map((genre, index) => (
     <Link to={`/genres/${genre}`}>
@@ -84,6 +115,7 @@ const FilterFilms = () => {
     
   ))}
 </div>
+)}
     </div>
 
 

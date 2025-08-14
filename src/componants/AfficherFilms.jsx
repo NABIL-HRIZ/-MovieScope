@@ -6,11 +6,13 @@ import ScrollToTopButton from './ScrollToTopButton';
 import {Link} from 'react-router-dom'
 const AfficherFilms = () => {
     const [movies,setMovies]=useState([])
+  const [loading,setLoading]=useState(true)
+
 
     useEffect(()=>{
  AOS.init({duration:800});
 
-    })
+    },[])
 
  useEffect(() => {
   fetch("/all-movies-data.xlsx") 
@@ -19,18 +21,35 @@ const AfficherFilms = () => {
       const workbook = XLSX.read(arrayBuffer, { type: "array" }); 
       const worksheet = workbook.Sheets[workbook.SheetNames[0]];  
       const jsonData = XLSX.utils.sheet_to_json(worksheet);       
-      setMovies(jsonData);                                          
+      setMovies(jsonData); 
+
+      setTimeout(() => {
+        setLoading(false);
+      },1875);
+      
     });
 }, []);
+
     
   return (
     <>
+
       <div className='allfilms-section'>
         <h1>Toutes Les Films</h1>
+
+        {loading ? (
+  <div className="loader-container">
+    <div class="loader">
+      
+    </div>
+    <p>En cours de chargement ...</p>
+  </div>
+) : (
+        
          <div className='movies-grid'>
         {movies.map((movie, index) => (
-          <Link to={`/film/${movie.id}`}>
-             <div className='movie-card' key={index} data-aos="fade-down" data-aos-delay={Math.floor(index / 4) *300}>
+          <Link to={`/film/${movie.id}`} key={index} >
+             <div className='movie-card' data-aos="fade-down" data-aos-delay={Math.floor(index / 4) *300}>
             <div className="card-header">
               <img
                 src={movie.image_url}
@@ -54,7 +73,7 @@ const AfficherFilms = () => {
        
         ))}
       </div>
-
+)}
       </div>
       
       <ScrollToTopButton />

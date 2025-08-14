@@ -12,7 +12,7 @@ const Footer = () => {
             <h2>Liens</h2>
             <ul>
                 <li><Link to={'/'} style={{color: 'gray',textDecoration:"none"}}>Accueil</Link></li>
-                <li><Link to={'/props-nous'} style={{color:'gray',textDecoration:"none"}}>A prpos-nous</Link></li>
+                <li><Link to={'/propos-nous'} style={{color:'gray',textDecoration:"none"}}>A prpos-nous</Link></li>
             </ul>
         </div>
         <div className='footer-conatct'>
