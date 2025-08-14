@@ -21,7 +21,8 @@ export default function About() {
   };
   return (
     <>
-      <Swiper
+    <div className='about-section'>
+ <Swiper
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
@@ -43,7 +44,7 @@ export default function About() {
         MovieScope est votre destination ultime pour découvrir, explorer et apprécier les films 
         du monde entier. Notre objectif est de vous offrir des critiques fiables.
       </p>
-                 <Link className='btn btn-pulse' to="/Afficher-films">Afficher Toutes </Link>
+                 <Link className='btn btn-pulse' to="/Afficher-films">Voir Films </Link>
 
     </div>
 
@@ -57,7 +58,7 @@ export default function About() {
         de favoris, vous ne manquerez jamais un film qui mérite d’être vu. Naviguez facilement 
         et trouvez le contenu qui correspond à vos goûts.
       </p>
-                          <Link className='btn btn-pulse' to="/Afficher-films">Afficher Toutes </Link>
+                          <Link className='btn btn-pulse' to="/Afficher-films">Voir Films </Link>
 
 
 
@@ -74,7 +75,7 @@ export default function About() {
         aux discussions. Ensemble, célébrons l’art du cinéma et explorons les merveilles qu’il a 
         à offrir.
       </p>
-                     <Link className='btn btn-pulse' to="/Afficher-films">Afficher Toutes </Link>
+                     <Link className='btn btn-pulse' to="/Afficher-films">Voir Films </Link>
 
     </div>
         </SwiperSlide>
@@ -88,6 +89,8 @@ export default function About() {
       </Swiper>
       <AboutContent />
       <NosValues />
+    </div>
+     
     </>
   );
 }

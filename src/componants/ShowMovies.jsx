@@ -5,12 +5,18 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import '../styles/ShowMovies.css';
+import AOS from 'aos';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 import * as XLSX from "xlsx";
 import { Link } from 'react-router-dom';
 const ShowMovies = () => {
     const [data,setData]=useState([])
+
+        useEffect(()=>{
+     AOS.init({duration:800});
+    
+        })
     
     useEffect(() => {
   fetch("/all-movies-data.xlsx") 
@@ -68,8 +74,11 @@ const ShowMovies = () => {
 ))}
 
       </div>
-        
       </Swiper>
+        <Link to="/Afficher-films"  style={{padding:"500px",textDecoration:"none",color:"white"}} >
+      <button className='btn btn-pulse' data-aos="fade-up-right" >Voir Tout</button>
+      </Link>
+     
     </div>
     
   )

@@ -7,7 +7,23 @@ import ScrollToTopButton from './ScrollToTopButton';
 const FilterFilms = () => {
   const [movies, setMovies] = useState([]);
   const [uniqueGenres, setUniqueGenres] = useState([]);
+  const [searchInput,setSearchInput]=useState('')
+  const [suggestions,setSuggestions]=useState([])
 
+
+   const handleSearchChange = (e) => {
+    const value = e.target.value;
+    setSearchInput(value);
+
+       if (value.trim() === '') {
+      setSuggestions([]);
+      return;
+    }
+
+     const filtered = movies.filter((movie) => movie.title.toLowerCase().includes(value.toLowerCase()))
+      .slice(0, 5); 
+    setSuggestions(filtered);
+  };
   useEffect(() => {
     fetch('/all-movies-data.xlsx')
       .then((res) => res.arrayBuffer())
@@ -26,16 +42,29 @@ const FilterFilms = () => {
     <>
      <div className="filter-section">
       <div className="form-container">
-        <form className="form-input">
-          <i className="fa-solid fa-magnifying-glass"></i>
+        <form className="form-input" onSubmit={(e) => e.preventDefault()}>
+          <i className="fa-solid fa-magnifying-glass" style={{fontSize:"20px",color:"rgba(21, 58, 4, 1)"}}></i>
           <input
             className="input"
             placeholder="Rechercher un film ..."
             required
             type="text"
+            value={searchInput}
+            onChange={handleSearchChange}
           />
-
         </form>
+
+          {suggestions.length > 0 && (
+            <ul className="suggestions-list">
+              {suggestions.map((movie, index) => (
+                <li key={index}>
+                  <Link to={`/film/${movie.id}`}>
+                    {movie.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
       </div>
 
       <h1>Explorer par Genre</h1>

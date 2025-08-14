@@ -52,8 +52,8 @@
 .slide2-text p,
 .slide3-text p{
   padding: 10px;
-  font-size:14px;
-  color: #fff;
+  font-size:18px;
+  color: #d5d5d5;
   font-weight: 200 !important;
    font-family: "Protest Riot", sans-serif;
    width: 900px;
@@ -66,8 +66,8 @@
 
 .autoplay-progress {
   position: absolute;
-  right: 16px;
-  bottom: 16px;
+  right:20px;
+  bottom: 50px;
   z-index: 10;
   width: 48px;
   height: 48px;
