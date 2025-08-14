@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import * as XLSX from "xlsx";
-import '../styles/AfficherFilms.css'
+import { Link } from 'react-router-dom';
 import AOS from 'aos'
-import ScrollToTopButton from './ScrollToTopButton';
-import {Link} from 'react-router-dom'
-const AfficherFilms = () => {
-    const [movies,setMovies]=useState([])
-
-    useEffect(()=>{
+import '../styles/TopViewFilms.css'
+const TopViewFilms = () => {
+const [data,setData]=useState([])
+  useEffect(()=>{
  AOS.init({duration:800});
 
     })
@@ -19,16 +17,22 @@ const AfficherFilms = () => {
       const workbook = XLSX.read(arrayBuffer, { type: "array" }); 
       const worksheet = workbook.Sheets[workbook.SheetNames[0]];  
       const jsonData = XLSX.utils.sheet_to_json(worksheet);       
-      setMovies(jsonData);                                          
+      setData(jsonData);   
+      
+      const topMovies = jsonData.filter(movie => movie.topviews === true);
+      setData(topMovies);
+      
     });
-}, []);
     
+}, []);
+
   return (
-    <>
-      <div className='allfilms-section'>
-        <h1>Toutes Les Films</h1>
-         <div className='movies-grid'>
-        {movies.map((movie, index) => (
+    <div className='topview-section'>
+      <h1>Films Tendances </h1>
+      <p>Découvrez notre sélection</p>
+
+       <div className='movies-grid'>
+        {data.map((movie,index) => (
           <Link to={`/film/${movie.id}`}>
              <div className='movie-card' key={index} data-aos="fade-down" data-aos-delay={Math.floor(index / 4) *300}>
             <div className="card-header">
@@ -54,14 +58,8 @@ const AfficherFilms = () => {
        
         ))}
       </div>
-
-      </div>
-      
-      <ScrollToTopButton />
-    </>
-    
-      
+    </div>
   )
 }
 
-export default AfficherFilms
+export default TopViewFilms

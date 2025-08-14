@@ -14,6 +14,7 @@ import FilterFilms from './componants/FilterFilms';
 import AfterPage from './componants/AfterFilter';
 import AfterFilter from './componants/AfterFilter';
 import ScrollToTopOnNavigate from './componants/ScrollToTopOnNavigate';
+import TopViewFilms from './componants/TopViewFilms';
 const App = () => {
   return (
     <Router>
@@ -24,6 +25,7 @@ const App = () => {
           <>
             <HeroSection />
           <ShowMovies />
+          <TopViewFilms />
           <ScrollToTopButton />
           </>
         

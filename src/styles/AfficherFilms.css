@@ -2,7 +2,8 @@
 .allfilms-section{
     padding-top:120px;
     background-color: black;
-    padding-bottom:40px;
+     padding:120px 40px;
+
 }
 .movies-grid {
   display: flex;

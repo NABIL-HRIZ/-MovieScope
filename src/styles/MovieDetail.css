@@ -1,6 +1,5 @@
 .film-detail{
   position: relative;
-  border-radius:20px;
   overflow: hidden;
   color: #fff;
   background: #0b0c10;
@@ -133,6 +132,13 @@ justify-content: flex-start;  gap: 12px;
   background-color: #000;
   padding:30px; 
 }
+.restfilms-section h1{
+  text-align: start;
+}
+.restfilms-section h1::after{
+  left: 20px;
+}
+
 .genre-container{
  padding-left:80px;
 }

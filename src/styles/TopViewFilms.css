@@ -1,0 +1,14 @@
+.topview-section{
+    background-color:#000;
+    padding:50px;
+}
+.topview-section h1{
+    text-align: start;
+}
+.topview-section h1::after{
+    left: 20px;
+}
+.topview-section p{
+    color: #fcfbfb;
+    margin-bottom: 20px;
+}

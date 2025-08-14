@@ -7,8 +7,9 @@ import value4 from '../assets/value4.jpg'
 const NosValues = () => {
   return (
     <>
-        <h1>Nos Valeurs</h1>
-        <div class="parent">
+    <div className='Nos-value-secion'>
+           <h1>Nos Valeur</h1>
+             <div class="parent">
     <div class="div1">
       <img src={value3} alt="" srcset="" width={"250px"} height={"350px"} />
     </div>
@@ -37,7 +38,9 @@ const NosValues = () => {
          <h2> Accessibilité pour Tous</h2>
         <p>Nous rendons la découverte de nouveaux films simple, agréable et ouverte à tous les amoureux du cinéma.</p>
     </div>
-</div>
+        </div>
+    </div>
+      
     
     </>
     

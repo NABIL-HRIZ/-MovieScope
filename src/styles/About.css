@@ -9,7 +9,7 @@
   display: flex !important;
   align-items: center !important; 
   justify-content: center !important;
-  overflow: hidden !important; /* makes sure overlay stays inside */
+  overflow: hidden !important;
   margin-top:-50px;
 }
 
