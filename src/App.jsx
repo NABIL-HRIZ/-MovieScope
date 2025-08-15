@@ -11,14 +11,13 @@ import Footer from './componants/Footer';
 import ScrollToTopButton from './componants/ScrollToTopButton';
 import MovieDetail from './componants/MovieDetail';
 import FilterFilms from './componants/FilterFilms';
-import AfterPage from './componants/AfterFilter';
 import AfterFilter from './componants/AfterFilter';
 import ScrollToTopOnNavigate from './componants/ScrollToTopOnNavigate';
 import TopViewFilms from './componants/TopViewFilms';
 import TopRating from './componants/TopRating';
 const App = () => {
   return (
-    <Router>
+    <Router  basename="/-MovieScope">
     <MyNavbar />
         <ScrollToTopOnNavigate />
       <Routes>

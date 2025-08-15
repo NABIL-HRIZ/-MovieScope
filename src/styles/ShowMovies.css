@@ -26,4 +26,25 @@
   object-fit: cover;
 }
 
-/* leffect de lerest cest le meme pour AffciherFilms */
+.show-all-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px; 
+}
+.show-all-btn-container button:hover{
+  color: #FFF;
+
+}
+
+@media (max-width: 768px) {
+  .showMovies-section {
+    padding: 30px 20px;
+  }
+
+  .swiper-slide {
+    width: 200px;
+  }
+  .showFilmsBtn button{
+    padding-right: 200px;
+  }
+}

@@ -38,7 +38,7 @@ useEffect(() => {
         loop
         
       >
-        <source src="./50 Movies to Watch Before You Die.mp4" type="video/mp4" />
+        <source src="/-MovieScope/50 Movies to Watch Before You Die.mp4" type="video/mp4" />
         
       </video> 
        

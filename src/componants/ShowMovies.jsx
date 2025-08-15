@@ -19,7 +19,7 @@ const ShowMovies = () => {
         })
     
     useEffect(() => {
-  fetch("/all-movies-data.xlsx") 
+  fetch("/-MovieScope/all-movies-data.xlsx") 
     .then((res) => res.arrayBuffer()) 
     .then((arrayBuffer) => {
       const workbook = XLSX.read(arrayBuffer, { type: "array" }); 
@@ -75,9 +75,11 @@ const ShowMovies = () => {
 
       </div>
       </Swiper>
-        <Link to="/Afficher-films"  style={{padding:"500px",textDecoration:"none",color:"white"}} >
-      <button className='btn btn-pulse' data-aos="fade-up-right" >Voir Tout</button>
-      </Link>
+       <div className="show-all-btn-container">
+        <Link to="/Afficher-films">
+        <button className='btn btn-pulse' data-aos="fade-up-right">Voir Tout</button>
+       </Link>
+</div>
      
     </div>
     

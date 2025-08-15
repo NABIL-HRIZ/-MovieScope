@@ -17,7 +17,7 @@ const AfterFilter = () => {
 
 
   useEffect(() => {
-    fetch("/all-movies-data.xlsx")
+    fetch("/-MovieScope/all-movies-data.xlsx")
       .then(res => res.arrayBuffer())
       .then(arrayBuffer => {
         const workbook = XLSX.read(arrayBuffer, { type: "array" });
