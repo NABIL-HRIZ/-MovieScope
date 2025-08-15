@@ -86,3 +86,37 @@
             font-family: "Protest Riot", sans-serif;
             color: gray;
         }
+
+        @media (max-width: 768px) {
+    .Nos-value-secion {
+        padding: 40px 20px;
+    }
+
+    .parent {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;
+        padding-left: 0;
+        gap: 15px;
+    }
+
+    .div1 .div2, .div3, .div4, .div5, .div6, .div7 {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        
+    }
+
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}

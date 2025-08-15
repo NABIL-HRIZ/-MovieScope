@@ -81,7 +81,10 @@ const FilterFilms = () => {
               {suggestions.map((movie, index) => (
                 <li key={index}>
                   <Link to={`/film/${movie.id}`}>
+                    <div className='suggestions-list-desc'>
                     {movie.title}
+                    <img src={movie.image_url} alt="" width={'50px'} height={"50px"}/> 
+                    </div>
                   </Link>
                 </li>
               ))}

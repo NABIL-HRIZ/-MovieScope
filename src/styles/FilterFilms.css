@@ -11,7 +11,7 @@
 }
 .form-input {
   position: relative;
-  width: 300px;
+  width: 400px;
   display: flex;
  align-items: center; 
   background-color:rgb(255, 255, 255);
@@ -90,14 +90,12 @@
   position: absolute;
   top: 100%;
   right: 0; 
-  width:300px;
+  width:400px;
   background: rgba(15, 15, 15, 0.3);
-
   backdrop-filter: blur(8px);
   border-radius: 12px;
   overflow-y: auto;
   max-height: 250px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   z-index: 999;
   padding: 8px 0;
   margin-top: 20px;
@@ -130,5 +128,77 @@
   padding: 30px;
 }
 
+.suggestions-list-desc{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
 
 
+@media (max-width: 768px) {
+  .filter-section {
+    padding: 60px 20px; 
+  }
+
+  .form-container {
+    justify-content: center;
+    padding-top:80px;
+  }
+
+  .form-input {
+    width: 100%; 
+    max-width: 300px;
+    padding: 5px 10px;
+  }
+
+  .form-input input {
+    font-size: 0.9rem;
+  }
+
+  .suggestions-list {
+    width: 100%;
+    max-width: 300px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .no-results-message {
+    width: 100%;
+    max-width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+  background: rgba(15, 15, 15, 0.3);
+  z-index: 999;
+  font-size:25px;
+
+ 
+  }
+
+  .filter-section h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .genres-grid {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px;
+    margin-top: 15px;
+    justify-items: center;
+  }
+
+  .filterParGenre {
+    width: 100%;
+    max-width: 250px;
+    height: 120px;
+    padding: 15px;
+  }
+
+  .filterParGenre span {
+    font-size: 1rem;
+  }
+
+  .filterParGenre p {
+    font-size: 0.75rem;
+  }
+}
