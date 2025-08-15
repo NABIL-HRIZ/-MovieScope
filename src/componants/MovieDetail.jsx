@@ -41,7 +41,7 @@ const MovieDetail = () => {
     <>
       <div
         className="film-detail"
-        style={{ '--bg': `url(${movie.image_url})` }}
+        style={{ background: `url(${movie.image_url})` }}
       >
         <div className="film-detail__overlay" />
 
@@ -51,10 +51,13 @@ const MovieDetail = () => {
           </div>
 
           <div className="film-infos">
-            <h2 className="film-title">{movie.title}</h2>
+            <h2 className="film-title">{movie.title} <span className="year">{movie.year}</span></h2>
 
             <div className="meta">
+              
               <span className="genre-pill">{movie.genre}</span>
+
+             
               <div className="rating-badgee"> <i className="fa-solid fa-star" style={{fontSize:"12px"}}></i> {movie.rating}</div>
             </div>
 

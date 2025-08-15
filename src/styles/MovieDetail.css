@@ -69,6 +69,15 @@ border-radius: 20px;
   align-items: flex-start !important; 
 justify-content: flex-start;  gap: 12px;
 }
+.meta-pill{
+  display: flex;
+  gap: 20px;
+}
+
+ .year{
+  font-size: 18px;
+  color: rgb(220, 219, 219);
+}
 
 .genre-pill{
   padding: .4rem .9rem;
