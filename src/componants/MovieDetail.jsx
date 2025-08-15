@@ -55,7 +55,7 @@ const MovieDetail = () => {
 
             <div className="meta">
               <span className="genre-pill">{movie.genre}</span>
-              <div className="rating-badge">{movie.rating}</div>
+              <div className="rating-badgee"> <i className="fa-solid fa-star" style={{fontSize:"12px"}}></i> {movie.rating}</div>
             </div>
 
             <h4 className="section-label">Synopsis</h4>

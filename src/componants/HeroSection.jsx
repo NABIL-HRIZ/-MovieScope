@@ -22,7 +22,6 @@ const HeroSection = () => {
          autoPlay
         muted        
       >
-        {/* change the video */}
         <source src="/-MovieScope/hero-section-video.mp4" type="video/mp4" />  
         
       </video> 
