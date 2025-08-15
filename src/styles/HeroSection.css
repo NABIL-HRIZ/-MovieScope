@@ -4,7 +4,6 @@
   height: 100vh;
   font-family: "Protest Riot", sans-serif;
   overflow: hidden;
-padding-bottom:50px;
 }
 
 .hero-section::before {
@@ -112,7 +111,7 @@ padding-bottom:50px;
 
 @media (max-width: 768px) {
   .section-content {
-    padding-top:300px;
+    padding-top:100px;
     justify-content: center;
     
   }
@@ -140,6 +139,7 @@ padding-bottom:50px;
   .content-right {
     margin-top: 20px;
     width: 100%;
+    display:none;
   }
 
   .content-right img {
@@ -148,10 +148,8 @@ padding-bottom:50px;
  
  .video-bg {
     width: 100%;
-    height: 100%;
+    height: 110%;
     object-fit: cover;
-    transform: scale(1);
-     transform-origin: top center; 
   }
 
 
