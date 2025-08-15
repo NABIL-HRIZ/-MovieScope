@@ -1,27 +1,13 @@
 import React, { useEffect } from 'react';
-import { useRef } from 'react';
+
 import '../styles/HeroSection.css';
 import img from '../assets/sec-img.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
 const HeroSection = () => {
-  const videoRef = useRef(null);
 
-  
-useEffect(() => {
-  const video = videoRef.current;
-  if (video) {
-    video.currentTime = 73;
-    video.play();
 
-    video.addEventListener("timeupdate", () => {
-      if (video.currentTime >= 110) {
-        video.currentTime = 73; 
-      }
-    });
-  }
-}, []);
 
   useEffect(() => {
     AOS.init({ duration: 1000 }); 
@@ -32,13 +18,11 @@ useEffect(() => {
       <div className="section-content" >
 
        <video
-        ref={videoRef}
         className="video-bg"
-        muted
-        loop
-        
+         autoPlay
+        muted        
       >
-        <source src="/-MovieScope/50 Movies to Watch Before You Die.mp4" type="video/mp4" />
+        <source src="/-MovieScope/hero-section-video.mp4" type="video/mp4" />
         
       </video> 
        
