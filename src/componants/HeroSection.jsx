@@ -17,14 +17,14 @@ const HeroSection = () => {
     <section className='hero-section'>
       <div className="section-content" >
 
-       {/* <video
+       <video
         className="video-bg"
          autoPlay
         muted        
       >
-        <source src="/-MovieScope/hero-section-video.mp4" type="video/mp4" />  
+        <source src="/-MovieScope/hero-video.mp4" type="video/mp4" />  
         
-      </video>  */}
+      </video> 
        
         <div className='stars' data-aos="fade-right" data-aos-delay="500">
           <i className="fa-solid fa-star"></i>
