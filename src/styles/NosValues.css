@@ -19,18 +19,36 @@
 
 .div2 {
     grid-row: span 2 / span 2;
+    opacity: 0.5;
+    transition:all  0.5s ease;
+
+}
+.div2:hover{
+    opacity: 1;
 }
 
 .div3 {
     grid-row: span 2 / span 2;
     grid-column-start: 2;
     grid-row-start: 3;
+    opacity: 0.5;
+    transition:all  0.5s ease;
+
+}
+.div3:hover{
+    opacity: 1;
 }
 
 .div4 {
     grid-row: span 2 / span 2;
     grid-column-start: 2;
     grid-row-start: 5;
+    opacity: 0.5;
+    transition:all  0.5s ease;
+
+}
+.div4:hover{
+    opacity: 1;
 }
 
 .div5 {

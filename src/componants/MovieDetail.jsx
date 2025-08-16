@@ -41,7 +41,8 @@ const MovieDetail = () => {
     <>
       <div
         className="film-detail"
-        style={{ background: `url(${movie.image_url})` }}
+        style={{background: `url(${movie.image_url}) no-repeat center 30% / cover`
+      }}
       >
         <div className="film-detail__overlay" />
 

@@ -13,7 +13,7 @@
   margin-top:-50px;
 }
 
-.slide1 { background-image: url('../assets/slide-img3.jpg') !important; }
+.slide1 { background-image: url('../assets/watching.jpg') !important; }
 .slide2 { background-image: url('../assets/slide-img1.jpg') !important; }
 .slide3 { background-image: url('../assets/slide-img2.jpg') !important; }
 
@@ -24,7 +24,7 @@
   left: 0 !important;
   width: 100% !important;
   height: 100% !important;
-  background-color: rgba(0, 0, 0, 0.6) !important; /* 0.5 opacity black overlay */
+  background-color: rgba(0, 0, 0, 0.6) !important; 
   z-index: 1 !important;
 }
 .slide1-text,
