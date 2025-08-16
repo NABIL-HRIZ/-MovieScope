@@ -20,7 +20,8 @@ const HeroSection = () => {
        <video
         className="video-bg"
          autoPlay
-        muted        
+        muted   
+         loop     
       >
         <source src="/-MovieScope/hero-video.mp4" type="video/mp4" />  
         
